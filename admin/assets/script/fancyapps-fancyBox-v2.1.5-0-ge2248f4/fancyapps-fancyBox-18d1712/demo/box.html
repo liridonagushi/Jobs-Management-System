@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fancyBox - Fancy jQuery Lightbox Alternative | Demonstration</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="../lib/jquery-1.10.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('.fancybox').fancybox();
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 20
+				});
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+
+	<ul>
+		<li><a class="fancybox" href="#inline1" title="Lorem ipsum dolor sit amet">Inline</a></li>
+		<li><a class="fancybox fancybox.ajax" href="ajax.txt">Ajax</a></li>
+		<li><a class="fancybox fancybox.iframe" href="iframe.html">Iframe</a></li>
+		<li><a class="fancybox" href="http://www.facebook.com/jp/events/cs3_web_edition_tour/swfs/perform.swf">Swf</a></li>
+	</ul>
+
+</body>
+
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="../source/jquery.fancybox.js?v=2.1.5"></script>
+</html>
